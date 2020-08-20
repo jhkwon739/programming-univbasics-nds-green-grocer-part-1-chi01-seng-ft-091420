@@ -20,7 +20,7 @@ def consolidate_cart(cart)
   #pp cart
   final_cart = []
   current_index = 0
-  count = 1
+  count = 0
   pp cart.sort_by { |product| product[:item] }
   while current_index + 1 < cart.length do 
     p "current index: #{current_index} and current_item #{cart[current_index]}"
