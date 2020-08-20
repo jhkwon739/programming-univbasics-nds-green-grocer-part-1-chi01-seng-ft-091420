@@ -40,7 +40,7 @@ def consolidate_cart(cart)
   item[:count] = 2
   item_plus_count = item
   final_cart << item_plus_count
-  pp final_cart
+  final_cart
 end
 
 
