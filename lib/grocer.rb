@@ -23,6 +23,7 @@ def consolidate_cart(cart)
   count = 1
   pp cart.sort_by { |product| product[:item] }
   while current_index + 1 < cart.length do 
+    p "current index: #{current_index} and current_item #{cart[current_index]}"
     if cart[current_index][:item] == cart[current_index + 1][:item]
       current_index += 1
       count += 1 
