@@ -29,14 +29,16 @@ def consolidate_cart(cart)
       count += 1 
     else
       item = cart[current_index]
-      item_plus_count = item[:count] = count
+      item[:count] = count
+      item_plus_count = item
       final_cart << item_plus_count
       count = 1
       current_index += 1
     end
   end
   item = cart[current_index]
-  item_plus_count = item[:count] = count
+  item[:count] = 2
+  item_plus_count = item
   final_cart << item_plus_count
   pp final_cart
 end
