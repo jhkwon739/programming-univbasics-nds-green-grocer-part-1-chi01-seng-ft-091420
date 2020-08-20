@@ -24,12 +24,14 @@ def consolidate_cart(cart)
   #pp cart.sort_by { |product| product[:item] }
   while current_index + 1 < cart.length do 
     if cart[current_index][:item] == cart[current_index + 1][:item]
+      current_index += 1
       count += 1 
     else
       item = cart[current_index]
       item_plus_count = item[:count] = count
       final_cart << item_plus_count
       count = 1
+      current_index += 1
     end
     current_index += 1
   end
