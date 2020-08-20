@@ -21,7 +21,7 @@ def consolidate_cart(cart)
   final_cart = []
   current_index = 0
   count = 1
-  #pp cart.sort_by { |product| product[:item] }
+  pp cart.sort_by { |product| product[:item] }
   while current_index + 1 < cart.length do 
     if cart[current_index][:item] == cart[current_index + 1][:item]
       current_index += 1
